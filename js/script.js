@@ -1,5 +1,12 @@
 // TO DO
 
+// GLOBAL VARIABLES
+
+let number1 = "empty";
+let number2 = "empty";
+let operatorFunction = "empty";
+let display = 0;
+
 // 1. Create functions for:
 //       add, subtract, multiply, divide
 
@@ -23,8 +30,8 @@ function divide(num1, num2) {
 
 // 2. Create function operate
 
-function operate(func, num1, num2) {
-    switch (func) {
+function operate(operator, num1, num2) {
+    switch (operator) {
         case "add":
             return add(num1, num2);
         case "subtract":
@@ -40,5 +47,25 @@ function operate(func, num1, num2) {
 }
 
 // 3. Create functions that populate display
+
+const displayText = document.querySelector(".item-display");
+
+displayText.innerHTML = '0';
+
+const operators = document.querySelectorAll(".operator");
+
+for (let operator of operators) {
+    operator.addEventListener('click', () => {
+
+        operatorFunction = operator.id;
+        displayText.innerHTML = operator.innerHTML;
+
+    })
+}
+
+// add an event listener that on click 
+//updates the display with selection
+// store the selection in a variable num 1, num 2, operator 
+
 // 4. Make calculator work
 
