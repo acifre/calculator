@@ -6,6 +6,7 @@ let number1 = "empty";
 let number2 = "empty";
 let operatorFunction = "empty";
 let display = 0;
+let result = 0;
 
 // 1. Create functions for:
 //       add, subtract, multiply, divide
@@ -105,7 +106,8 @@ function clear() {
     number1 = 'empty';
     number2 = 'empty';
     operatorFunction = 'empty';
-    displayText.innerHTML = 0;
+    result = 0;
+    displayText.innerHTML = result;
 
     console.log([number1, number2, operatorFunction]);
 }
@@ -116,7 +118,7 @@ function clear() {
 const equalBtn = document.querySelector('.item-equal');
 
 equalBtn.addEventListener('click', () => {
-    let result = operate(operatorFunction, number1, number2);
+    result = operate(operatorFunction, number1, number2);
 
     displayText.innerHTML = result;
 });
