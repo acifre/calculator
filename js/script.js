@@ -7,6 +7,7 @@ let number2 = "empty";
 let operatorFunction = "empty";
 let display = 0;
 let result = 0;
+let equalPressed = false
 
 // 1. Create functions for:
 //       add, subtract, multiply, divide
@@ -61,6 +62,7 @@ for (let operator of operators) {
 
         operatorFunction = operator.id;
         displayText.innerHTML = operator.innerHTML;
+        equalPressed = false;
 
     })
 }
@@ -71,17 +73,26 @@ const numbers = document.querySelectorAll(".number");
 
 for (let number of numbers) {
     number.addEventListener('click', () => {
-        if (number1 === 'empty' && number2 === 'empty') {
-            number1 = parseInt(number.innerHTML);
+        if (number1 === 'empty' && operatorFunction === 'empty' && number2 === 'empty') {
+            number1 = number.innerHTML;
             displayText.innerHTML = number.innerHTML;
             console.log([1, number1, number2])
-        } else if (number1 != 'empty' && number2 === 'empty') {
-            number2 = parseInt(number.innerHTML);
-            displayText.innerHTML = number.innerHTML;
+        } else if (number1 != 'empty' && operatorFunction === 'empty' && number2 === 'empty') {
+            number1 += number.innerHTML;
+            displayText.innerHTML = number1;
             console.log([2, number1, number2])
+        } else if (number1 != 'empty' && operatorFunction != 'empty' && number2 === 'empty') {
+            number2 = number.innerHTML;
+            displayText.innerHTML = number.innerHTML;
+            console.log([3, number1, number2])
+        } else if (number1 != 'empty' && operatorFunction != 'empty' && number2 != 'empty' && !equalPressed) {
+            number2 += number.innerHTML;
+            displayText.innerHTML = number2;
+            console.log([4, number1, number2])
         } else {
             displayText.innerHTML = 0;
             alert("Error too many numbers.");
+            console.log([5, number1, number2])
             clear()
         }
     })
@@ -118,8 +129,11 @@ function clear() {
 const equalBtn = document.querySelector('.item-equal');
 
 equalBtn.addEventListener('click', () => {
-    result = operate(operatorFunction, number1, number2);
+    result = operate(operatorFunction, parseInt(number1), parseInt(number2));
 
     displayText.innerHTML = result;
+    equalPressed = true;
+    number1 = result;
+    number2 = 'empty';
 });
 
