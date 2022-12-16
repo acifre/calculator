@@ -1,5 +1,118 @@
-.container {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #292929;
+}
+
+.container {
+    display: grid;
+    width: 200px;
+    margin-top: 100px;
+    border: 2px solid darkslategray;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    grid-template-areas: 
+      "display display display display"
+      "clear clear clear divide"
+      "seven eight nine multi"
+      "four five six minus"
+      "one two three plus"
+      "nada nada nada equal";
+
+}
+
+.item-display {
+    grid-area: display;
+    background-color: whitesmoke;
+    color: black;
+    padding-right: 8px;
+    text-align: end;
+    font-size: 24px;
+}
+
+.fnct {
+    background-color: steelblue;
+}
+
+.number {
+    background-color: skyblue;
+}
+
+.item-clear {
+    grid-area: clear;
+}
+
+.item-divide {
+    grid-area: divide;
+}
+
+.item-7 {
+    grid-area: seven;
+}
+
+.item-8 {
+    grid-area: eight;
+}
+
+.item-9 {
+    grid-area: nine;
+}
+
+.item-multiply {
+    grid-area: multi;
+}
+
+.item-4 {
+    grid-area: four;
+}
+
+.item-5 {
+    grid-area: five;
+}
+
+.item-6 {
+    grid-area: six;
+}
+
+.item-subtract {
+    grid-area: minus;
+}
+
+.item-1 {
+    grid-area: one;
+}
+
+.item-2 {
+    grid-area: two;
+}
+
+.item-3 {
+    grid-area: three;
+}
+
+.item-add {
+    grid-area: plus;
+}
+
+.item-0 {
+    grid-area: nada;
+}
+
+.item-equal {
+    grid-area: equal;
+}
+
+button {
+    border: 1px solid darkslategray;
+    font-size: 18px;
 
 }
