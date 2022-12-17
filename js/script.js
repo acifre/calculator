@@ -5,7 +5,6 @@
 let number1 = "empty";
 let number2 = "empty";
 let operatorFunction = "empty";
-let display = 0;
 let result = 0;
 let equalPressed = false;
 let operatorPressed = false;
@@ -88,33 +87,24 @@ for (let number of numbers) {
         if (number1 === 'empty' && operatorFunction === 'empty' && number2 === 'empty') {
             number1 = number.innerHTML;
             displayText.innerHTML = number.innerHTML;
-            console.log([1, number1, number2])
         } else if (number1 != 'empty' && operatorFunction === 'empty' && number2 === 'empty') {
             number1 += number.innerHTML;
             displayText.innerHTML = number1;
-            console.log([2, number1, number2])
         } else if (number1 != 'empty' && operatorFunction != 'empty' && number2 === 'empty') {
             number2 = number.innerHTML;
             displayText.innerHTML = number.innerHTML;
-            console.log([3, number1, number2])
         } else if (number1 != 'empty' && operatorFunction != 'empty' && number2 != 'empty' && !equalPressed) { // !equalpressed so that numbers keep getting added to number2
             number2 += number.innerHTML;
             displayText.innerHTML = number2;
-            console.log([4, number1, number2])
         } else {
             displayText.innerHTML = 0;
             alert("Error too many numbers.");
-            console.log([5, number1, number2])
             clear()
         }
     })
 }
 
 
-
-// add an event listener that on click 
-//updates the display with selection
-// store the selection in a variable num 1, num 2, operator 
 
 // 4. Make calculator work
 
@@ -133,8 +123,6 @@ function clear() {
     operatorPressed = false;
     equalPressed = false;
     displayText.innerHTML = result;
-
-    console.log([number1, number2, operatorFunction]);
 }
 
 
@@ -161,9 +149,6 @@ for (let button of buttons) {
     button.addEventListener('click', () => {
         button.classList.add('pressed');
     })
-}
-
-for (let button of buttons) {
     button.addEventListener('transitionend', removeTransition)
 }
 
