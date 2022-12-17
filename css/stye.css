@@ -40,9 +40,10 @@ button {
 
 .header {
     text-align: center;
-    padding: 16px;
+    max-width: 480px;
+    padding: 8px;
     color: black;
-    font-size: 80px;
+    font-size: 90px;
     background-color: rgb(255,255,0);
     border-radius: 5px;
     margin-bottom: 16px;
@@ -53,7 +54,7 @@ button {
 
 .container {
     display: grid;
-    width: auto;
+    max-width: 420px;
     /* border: 1px solid dimgray; */
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(6, 100px);
