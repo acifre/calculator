@@ -1,11 +1,11 @@
-/* EVERYTHING */
+/*                  EVERYTHING */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-/* TYPE OF CONTAINERS */
+/*                  TYPE OF CONTAINERS */
 
 body {
     display: flex;
@@ -25,13 +25,9 @@ button {
 
 }
 
-.pressed {
-    transform: scale(1.1);
-    border-color: white;
-    box-shadow: 0 0 1rem white;
-}
 
-/* HEADER-CONTAINER */
+
+/*                  HEADER-CONTAINER */
 
 .header-grid {
     display: flex;
@@ -53,7 +49,7 @@ button {
     margin-top: 16px;
 }
 
-/* GRID CONTAINER */
+/*                  GRID CONTAINER */
 
 .container {
     display: grid;
@@ -71,7 +67,7 @@ button {
 
 }
 
-/* CLASSES FOR BUTTONS */
+/*                 CLASSES FOR BUTTONS */
 
 .fnct {
     background-color: rgb(130,91,255);
@@ -83,8 +79,16 @@ button {
     color: white;
 }
 
+.pressed {
+    transform: scale(1.1);
+    border-color: white;
+    box-shadow: 0 0 1rem white;
+}
 
-/* GRID ITEMS */
+
+/*                 GRID ITEMS */
+
+/* DISPLAY ITEM */
 
 .item-display {
     font-family: 'Calculator', sans-serif;
@@ -96,72 +100,61 @@ button {
     font-size: 80px;
 }
 
-.item-clear {
-    grid-area: clear;
-}
-
-.item-divide {
-    grid-area: divide;
-}
-
-.item-7 {
-    grid-area: seven;
-}
-
-.item-8 {
-    grid-area: eight;
-}
-
-.item-9 {
-    grid-area: nine;
-}
-
-.item-multiply {
-    grid-area: multi;
-}
-
-.item-4 {
-    grid-area: four;
-}
-
-.item-5 {
-    grid-area: five;
-}
-
-.item-6 {
-    grid-area: six;
-}
-
-.item-subtract {
-    grid-area: minus;
-}
-
-.item-1 {
-    grid-area: one;
-}
-
-.item-2 {
-    grid-area: two;
-}
-
-.item-3 {
-    grid-area: three;
-}
-
-.item-add {
-    grid-area: plus;
-}
+/* NUMBER ITEMS */
 
 .item-0 {
     grid-area: nada;
 }
+.item-1 {
+    grid-area: one;
+}
+.item-2 {
+    grid-area: two;
+}
+.item-3 {
+    grid-area: three;
+}
+.item-4 {
+    grid-area: four;
+}
+.item-5 {
+    grid-area: five;
+}
+.item-6 {
+    grid-area: six;
+}
+.item-7 {
+    grid-area: seven;
+}
+.item-8 {
+    grid-area: eight;
+}
+.item-9 {
+    grid-area: nine;
+}
+
+/* OPERATOR ITEMS */
 
 .item-equal {
     grid-area: equal;
     background-color: rgb(255,255,0);
     color: black;
 }
-
+.item-add {
+    grid-area: plus;
+}
+.item-subtract {
+    grid-area: minus;
+}
+.item-multiply {
+    grid-area: multi;
+}
+.item-divide {
+    grid-area: divide;
+}
+.item-clear {
+    grid-area: clear;
+}
 
 /* FOOTER */
 
