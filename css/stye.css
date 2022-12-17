@@ -41,10 +41,10 @@ button {
 
 .header {
     text-align: center;
-    max-width: 480px;
+    max-width: 320px;
     padding: 8px;
     color: black;
-    font-size: 88px;
+    font-size: 70px;
     background-color: rgb(255,255,0);
     border-radius: 5px;
     margin-bottom: 16px;
@@ -59,8 +59,8 @@ button {
     border: 1px solid black;
     border-radius: 5px;
     /* border: 1px solid dimgray; */
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(6, 100px);
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(6, 80px);
     grid-template-areas: 
       "display display display display"
       "clear clear clear divide"
@@ -99,9 +99,9 @@ button {
     grid-area: display;
     background-color: white;
     color: black;
-    padding-right: 8px;
+    padding-right: 16px;
     text-align: end;
-    font-size: 80px;
+    font-size: 68px;
 }
 
 /* NUMBER ITEMS */
