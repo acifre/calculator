@@ -64,7 +64,7 @@ for (let operator of operators) {
             operatorPressed = true;
         } else if (operatorPressed && number1 != 'empty' && number2 != 'empty') {
             let oldOperator = operatorFunction;
-            result = +operate(oldOperator, parseInt(number1), parseInt(number2)).toFixed(8);
+            result = +operate(oldOperator, parseInt(number1), parseInt(number2)).toFixed(5);
             operatorFunction = operator.id;
             number1 = result;
             number2 = 'empty';
@@ -131,7 +131,7 @@ function clear() {
 const equalBtn = document.querySelector('.item-equal');
 
 equalBtn.addEventListener('click', () => {
-    result = +operate(operatorFunction, parseInt(number1), parseInt(number2)).toFixed(8);
+    result = +operate(operatorFunction, parseInt(number1), parseInt(number2)).toFixed(5);
 
     displayText.innerHTML = result;
     equalPressed = true;
