@@ -43,7 +43,7 @@ button {
     max-width: 480px;
     padding: 8px;
     color: black;
-    font-size: 90px;
+    font-size: 88px;
     background-color: rgb(255,255,0);
     border-radius: 5px;
     margin-bottom: 16px;
@@ -54,7 +54,7 @@ button {
 
 .container {
     display: grid;
-    max-width: 420px;
+    max-width: 480px;
     /* border: 1px solid dimgray; */
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(6, 100px);
