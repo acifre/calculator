@@ -153,3 +153,22 @@ equalBtn.addEventListener('click', () => {
     console.log([number1, number2, operatorFunction, operatorPressed, equalPressed])
 });
 
+// TRANSITIONS
+
+const buttons = document.querySelectorAll('button');
+
+for (let button of buttons) {
+    button.addEventListener('click', () => {
+        button.classList.add('pressed');
+    })
+}
+
+for (let button of buttons) {
+    button.addEventListener('transitionend', removeTransition)
+}
+
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('pressed');
+  }
+
